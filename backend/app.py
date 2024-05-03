@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from sklearn.linear_model import LinearRegression
 
+from flask_cors import CORS
+
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3001"}}) 
 
 # Example historical data (replace with your actual historical data)
 # Example historical data (replace with your actual historical data)
